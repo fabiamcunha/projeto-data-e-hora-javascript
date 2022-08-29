@@ -24,11 +24,11 @@ function updateClock(){
 
 
     digitalElement.innerHTML=`${fixZero(hour)}:${fixZero(minute)}:${fixZero(second)}`;
-
-    let sdeg=((360/60)*second)-90;
+     //rotação do ponteiro
+    let sdeg=((360/60)* second)-90;
     let mdeg=((360/60) * minute)-90;
     let hdeg=((360/12) * hour)-90;
-    
+   
     sElement.style.transform=`rotate(${sdeg}deg)`;
     mElement.style.transform=`rotate(${mdeg}deg)`;
     hElement.style.transform=`rotate(${hdeg}deg)`;
@@ -45,7 +45,7 @@ function updateClock(){
 
     }else {
 
-        document.querySelector('#imagen').classList.add('noite');
+        document.querySelector('#back').classList.add('noite');
 
 }
            
